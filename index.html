@@ -104,19 +104,30 @@
 
         
         <!-- objetos 3d -->
-        <a-asset-item id="amapola-obj" src="assets/3D/maki.obj"></a-asset-item>
+        <a-asset-item id="amapola" src="assets/3D/Gltf/maki_2.gltf"></a-asset-item>
         <a-asset-item id="neopets-obj" src="assets/3D/neopets.obj"></a-asset-item>
-        <a-asset-item id="amapola-rosa" src="assets/3D/Gltf/amapola_met.gltf"></a-asset-item>
         <a-asset-item id="arbol" src="assets/3D/Gltf/arbol.gltf"></a-asset-item>
         <a-asset-item id="arcoiris" src="assets/3D/Gltf/arcoiris.gltf"></a-asset-item>
         <a-asset-item id="cubo" src="assets/3D/Gltf/cubo.gltf"></a-asset-item>
         <a-asset-item id="goldbag" src="assets/3D/Gltf/goldbag.gltf"></a-asset-item>
         <a-asset-item id="heartkey" src="assets/3D/Gltf/heartkey.gltf"></a-asset-item>
         <a-asset-item id="huevito" src="assets/3D/Gltf/huevito.gltf"></a-asset-item>
-        <a-asset-item id="palma-rosa" src="assets/3D/Gltf/palma_rosa.gltf"></a-asset-item>
-        <a-asset-item id="palma-rosa2" src="assets/3D/Gltf/palma_rosa2.gltf"></a-asset-item>
-        <a-asset-item id="palma-verde" src="assets/3D/Gltf/palma_verde.gltf"></a-asset-item>
+        <a-asset-item id="palma" src="assets/3D/Gltf/palma.gltf"></a-asset-item>
         <a-asset-item id="tumba" src="assets/3D/Gltf/tumba.gltf"></a-asset-item>
+        <a-asset-item id="duelodromo" src="assets/3D/Gltf/dueldromo.gltf"></a-asset-item>
+        <a-asset-item id="fuente" src="assets/3D/Gltf/fuente.gltf"></a-asset-item>
+        <a-asset-item id="joshua" src="assets/3D/Gltf/joshua.gltf"></a-asset-item>
+        <a-asset-item id="mija" src="assets/3D/Gltf/mija.gltf"></a-asset-item>
+        <a-asset-item id="hierba" src="assets/3D/Gltf/ramita_1.gltf"></a-asset-item>
+        <a-asset-item id="neon" src="assets/3D/Gltf/serendipia.gltf"></a-asset-item>
+        <a-asset-item id="sombrerito" src="assets/3D/Gltf/sombrerito.gltf"></a-asset-item>
+        <a-asset-item id="vela-1" src="assets/3D/Gltf/velas_1.gltf"></a-asset-item>
+        <a-asset-item id="vela-2" src="assets/3D/Gltf/velas_2.gltf"></a-asset-item>
+        <a-asset-item id="vela-3" src="assets/3D/Gltf/velas_3.gltf"></a-asset-item>
+        <a-asset-item id="vela-4" src="assets/3D/Gltf/velas_4.gltf"></a-asset-item>
+        <a-asset-item id="vela-5" src="assets/3D/Gltf/velas_5.gltf"></a-asset-item>
+        <a-asset-item id="vela-6" src="assets/3D/Gltf/velas_6.gltf"></a-asset-item>
+        <a-asset-item id="velas" src="assets/3D/Gltf/velas_completas.gltf"></a-asset-item>
 
         <!-- videos -->
         <video id="promo-1" autoplay loop="true" src="assets/video/homepage.mp4"></video>
@@ -151,40 +162,73 @@
     <a-scene physics="gravity:0; debug: true">
 
         <a-entity movement-controls kinematic-body>
-        <a-entity id="camera" camera position="0 1.6 -3.5" look-controls></a-entity>
+
+        <a-entity id="camera" camera position="0 1.6 -3.5" look-controls>
+
+            <a-entity
+                cursor="fuse:true; fuseTimeout: 500"
+                position="0 0 0"
+                geometry="primitive:ring; radiusInner: 0.02;"
+                material="color: black; shader:">
+
+            </a-entity>
+
+            </a-entity>
+
+        </a-entity>
+
         </a-entity>
 
         <!-- cielo y piso -->
         <a-sky src="#espacio-3"></a-sky>
-        <a-entity geometry="primitive: circle" scale="20 20 20" rotation="-90 0 0" material="side: double; blending: additive; color: #091553; width: 20; transparent: true; metalness: 1; metalnessMap: #bricks; metalnessTextureOffset: 20 20; metalnessTextureRepeat: 20 20; repeat: 2 2; normalMap: #neopia-texture" position=""></a-entity>
+        <a-entity geometry="primitive: circle" scale="20 20 20" rotation="-90 0 0" material="side: double; blending: additive; color: #091553; width: 20; transparent: true; metalness: 1; metalnessMap: #bricks; metalnessTextureOffset: 20 20; metalnessTextureRepeat: 20 20; repeat: 2 2; normalMap: #neopia-texture"></a-entity>
         
         <!-- 3d obj -->
     
-        <a-obj-model src="#neopets-obj" rotation="0 120 0" scale="0.1 0.1 0.05" position="8.32481 0 10.15754" material="" obj-model=""></a-obj-model>  
+        <a-obj-model src="#neopets-obj" rotation="16 93 -19.84" scale="0.4 0.4 0.04" position="-22.55 16.26 36.43" material="" obj-model=""></a-obj-model>  
         <a-entity gltf-model="#cubo" scale="0.2 0.2 0.2" position="6 0 3"></a-entity>   
-        <a-entity gltf-model="#arcoiris" scale="2.08623 2.15841 2.08623" position="13.1908 3.14852 -0.99605"></a-entity>       
+        <a-entity gltf-model="#arcoiris" scale="2.08623 2.15841 2.08623" position="17.078 4.190 -0.274" rotation="22.109 95.721 29.248"></a-entity>       
         <a-entity gltf-model="#goldbag" scale="0.13 0.13 0.13" position="-0.87807 0 -0.19299"></a-entity>
         <a-entity gltf-model="#tumba" scale="0.5 0.5 0.5" position="3.56162 0 -17.83944"></a-entity>
         <a-entity gltf-model="#tumba" scale="0.3 0.3 0.3" position="-4.66629 0 -17.03135" rotation="0 90 0"></a-entity>
         <a-entity gltf-model="#tumba" scale="0.2 0.2 0.2" position="2.23759 0 -13.72119" rotation="0 20 0"></a-entity>
         <a-entity gltf-model="#tumba" scale="0.3 0.3 0.3" position="-7.15209 0 -13.57179" rotation="0 180 0"></a-entity>
         <a-entity gltf-model="#tumba" scale="0.5 0.5 0.5" position="8.82114 0 -14.42276" rotation="0 40 0"></a-entity>
-        <a-entity gltf-model="#palma-verde" scale="1.3 1.3 1.3" position="2.96672 0 -5.2466" rotation="0 17 0"></a-entity>
-        <a-entity gltf-model="#palma-verde" scale="" position="1.73817 0 -1.0635" rotation="0 30 0"></a-entity>       
-         <a-entity gltf-model="#palma-rosa" scale="0.5 0.5 0.5" position="2.42776 0 -1.18277" rotation="0 62 0"></a-entity>
+        <a-entity gltf-model="#palma" scale="1.3 1.3 1.3" position="2.96672 0 -5.2466" rotation="0 17 0"></a-entity>
+        <a-entity gltf-model="#palma" scale="" position="1.73817 0 -1.0635" rotation="0 30 0"></a-entity>       
+         <a-entity gltf-model="#palma" scale="0.5 0.5 0.5" position="2.42776 0 -1.18277" rotation="0 62 0"></a-entity>
 
         <a-entity gltf-model="#arbol" scale="1 1.3 1" position="-1.89106 0 -0.43044"></a-entity>
         <a-entity gltf-model="#huevito" scale="0.1 0.1 0.1" position="0 0 -3.5"></a-entity> 
-        <a-entity gltf-model="#palma-rosa" scale="0.8 0.8 0.8" position="-3.15452 0 -5.26089"></a-entity>
-        <a-entity gltf-model="#palma-rosa2" scale="0.8 0.8 0.8" position="-0.99115 0.00757 -1.60249"></a-entity>
-        <a-entity gltf-model="#palma-verde" scale="" position="0 0 -0.77243" rotation="0 29.999999999999996 0"></a-entity>
-        <a-entity gltf-model="#palma-verde" scale="" position="0.90443 0 -6.24335" rotation="0 90 0"></a-entity>
+        <a-entity gltf-model="#palma" scale="0.8 0.8 0.8" position="-3.15452 0 -5.26089"></a-entity>
+        <a-entity gltf-model="#palma" scale="0.8 0.8 0.8" position="-0.99115 0.00757 -1.60249"></a-entity>
+        <a-entity gltf-model="#palma" scale="" position="0 0 -0.77243" rotation="0 29.999999999999996 0"></a-entity>
+        <a-entity gltf-model="#palma" scale="" position="0.90443 0 -6.24335" rotation="0 90 0"></a-entity>
+
+        <a-entity gltf-model="#duelodromo" scale="0.13 0.13 0.13" position="-9.4 0.3 14.135" rotation="0 150 0"></a-entity>
+        <a-entity gltf-model="#fuente" scale="1 1 1" position="0 1 15 " rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#joshua" scale="0.5 0.5 0.5" position="6 1 -8 " rotation="0 60 0"></a-entity>
+        <a-entity gltf-model="#amapola" scale="0.4 0.4 0.4" position="17 -1 -8" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#mija" scale="1 1 1" position="7.2 -2.72 12.66" rotation="0 130 0"></a-entity>
+        <a-entity gltf-model="#hierba" scale="1 1 1" position="16 1 8 " rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#neon" scale="1 1 1" position="16 1 5" rotation="0 90 0"></a-entity>
+        <a-entity gltf-model="#sombrerito" scale="0.1 0.1 0.1" position="0 0 13" rotation="0 180 0"></a-entity>
+        <a-entity gltf-model="#velas" scale="0.5 0.5 0.5" position="0 1 -16" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#vela-1" scale="0.5 0.5 0.5" position="-5 0 -15" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#vela-2" scale="0.5 0.5 0.5" position="-2 0 -14" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#vela-3" scale="0.5 0.5 0.5" position="0 0 -13" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#vela-4" scale="0.5 0.5 0.5" position="2 0 -16" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#vela-5" scale="0.5 0.5 0.5" position="-5 0 -15" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#vela-6" scale="0.5 0.5 0.5" position="-7 0 -8" rotation="0 180 0"></a-entity>
 
         <!-- neopia world -->
-        <a-sphere radius="1" color="white" position="0 3 -13.57992" src="#neopia-world" material="normalTextureOffset: 1 0; width: 510.63" geometry="segmentsHeight: 25; segmentsWidth: 50" rotation="0 260 0" scale="2 2 2"></a-sphere>
+        <a-sphere radius="1" color="white" position="0 3 -13.57992" src="#neopia-world" material="normalTextureOffset: 1 0; width: 510.63" geometry="segmentsHeight: 25; segmentsWidth: 50" rotation="0 260 0" scale="2 2 2"
+        animation__rotation="property: scale; from: 1 1 1; to: 2 2 2; dur: 10000; startEvents: click; loop:true; dir: alternate;">
+        </a-sphere>
 
         <!-- instalacion de estrellas -->
-        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.1 0.1 0.1" color="#C6BC29" position="6.3525 0.90142 -12.95861" rotation="0 0 14.999999999999998" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.1 0.1 0.1" color="#C6BC29" position="6.3525 0.90142 -12.95861" rotation="0 0 14.999999999999998" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5 ></a-torus-knot>
+
         <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.2 0.2 0.2" color="#C6BC29" position="5.68565 1.6929 -16.5639" rotation="0 0 14.999999999999998" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
         <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.2 0.2 0.2" color="#C6BC29" position="0.33515 1.68246 -19.09829" rotation="0 0 14.999999999999998" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
         <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.2 0.2 0.2" color="#C6BC29" position="4.31403 1.1948 -22.32682" rotation="0 0 14.999999999999998" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
@@ -279,7 +323,7 @@
         <a-image src="#neocam-31" position="-17 6 4.5" rotation="0 90 0"></a-image>
         <a-image src="#neocam-32" position="-17 6 6" rotation="0 90 0"></a-image>
 
-        <!-- random -->
+        <!-- random el static body no funciono -->
         <a-image static-body src="assets/images/lol/cola_machine.png" position="-5.86853 1.50606 4.13489" rotation="0 150 0" material="" geometry="" scale="3 3 3"></a-image>
 
         
